@@ -1,22 +1,22 @@
 package com.talentica.wifiindoorpositioning.wifiindoorpositioning.core;
 
-import java.util.List;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.ScheduledFuture;
-import java.util.concurrent.TimeUnit;
-
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
 import android.net.wifi.ScanResult;
 import android.net.wifi.WifiManager;
 import android.os.IBinder;
-import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import com.talentica.wifiindoorpositioning.wifiindoorpositioning.model.WifiData;
 import com.talentica.wifiindoorpositioning.wifiindoorpositioning.utils.AppContants;
+
+import java.util.List;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.TimeUnit;
 
 public class WifiService extends Service {
 
