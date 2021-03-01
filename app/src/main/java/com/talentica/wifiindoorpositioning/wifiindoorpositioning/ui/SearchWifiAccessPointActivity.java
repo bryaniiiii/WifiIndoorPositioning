@@ -8,20 +8,26 @@ import android.net.wifi.ScanResult;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.DividerItemDecoration;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+
+import org.jetbrains.annotations.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+
+
+
 import com.talentica.wifiindoorpositioning.wifiindoorpositioning.R;
 import com.talentica.wifiindoorpositioning.wifiindoorpositioning.adapter.WifiResultsAdapter;
 import com.talentica.wifiindoorpositioning.wifiindoorpositioning.model.AccessPoint;
-import com.talentica.wifiindoorpositioning.wifiindoorpositioning.model.IndoorProject;
+
 import com.talentica.wifiindoorpositioning.wifiindoorpositioning.utils.RecyclerItemClickListener;
 
 import java.util.ArrayList;

@@ -5,11 +5,11 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.design.widget.Snackbar;
+import com.google.android.material.snackbar.Snackbar;
+
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,6 +18,8 @@ import android.widget.Toast;
 import com.talentica.wifiindoorpositioning.wifiindoorpositioning.R;
 import com.talentica.wifiindoorpositioning.wifiindoorpositioning.model.AccessPoint;
 import com.talentica.wifiindoorpositioning.wifiindoorpositioning.model.IndoorProject;
+
+import org.jetbrains.annotations.Nullable;
 
 import java.util.Date;
 import java.util.UUID;

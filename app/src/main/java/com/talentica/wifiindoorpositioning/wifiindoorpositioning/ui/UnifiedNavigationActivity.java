@@ -2,10 +2,10 @@ package com.talentica.wifiindoorpositioning.wifiindoorpositioning.ui;
 
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
-import android.support.annotation.Nullable;
 
-import com.talentica.wifiindoorpositioning.wifiindoorpositioning.R;
 import com.talentica.wifiindoorpositioning.wifiindoorpositioning.ui.frags.PrefsFragment;
+
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Created by suyashg on 10/09/17.

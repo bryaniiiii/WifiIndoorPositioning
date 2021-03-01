@@ -3,7 +3,9 @@ package com.talentica.wifiindoorpositioning.wifiindoorpositioning.ui.frags;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
-import android.support.annotation.Nullable;
+
+
+import androidx.annotation.Nullable;
 
 import com.talentica.wifiindoorpositioning.wifiindoorpositioning.R;
 

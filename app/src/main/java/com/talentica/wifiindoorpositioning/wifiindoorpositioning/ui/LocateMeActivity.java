@@ -5,12 +5,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import androidx.core.content.LocalBroadcastManager;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.DividerItemDecoration;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,6 +27,8 @@ import com.talentica.wifiindoorpositioning.wifiindoorpositioning.model.LocationW
 import com.talentica.wifiindoorpositioning.wifiindoorpositioning.model.WifiData;
 import com.talentica.wifiindoorpositioning.wifiindoorpositioning.utils.AppContants;
 import com.talentica.wifiindoorpositioning.wifiindoorpositioning.utils.Utils;
+
+import org.jetbrains.annotations.Nullable;
 
 import io.realm.Realm;
 
