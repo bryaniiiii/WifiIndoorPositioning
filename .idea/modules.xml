@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/WifiIndoorPositioning.iml" filepath="$PROJECT_DIR$/WifiIndoorPositioning.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/UNABIZ_App.iml" filepath="$PROJECT_DIR$/.idea/modules/UNABIZ_App.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/UNABIZ_App.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/UNABIZ_App.app.iml" />
     </modules>
   </component>
 </project>
