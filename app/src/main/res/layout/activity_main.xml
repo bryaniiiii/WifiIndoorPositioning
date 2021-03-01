@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:text="@string/app_name"
+        android:gravity="center"
+        android:textSize="40sp"/>
+
+    <Button
+        android:id="@+id/mapping"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/mapping"/>
+
+    <Button
+        android:id="@+id/testing"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/testing"/>
+
+</LinearLayout>
