@@ -125,7 +125,8 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public void onLongClick(View view, int position) {
+    public void onLongClick(View view, final int position) {
+
 
     }
 }

@@ -17,6 +17,8 @@ import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.talentica.wifiindoorpositioning.wifiindoorpositioning.R;
 import com.talentica.wifiindoorpositioning.wifiindoorpositioning.adapter.NearbyReadingsAdapter;
 import com.talentica.wifiindoorpositioning.wifiindoorpositioning.core.Algorithms;
@@ -29,6 +31,9 @@ import com.talentica.wifiindoorpositioning.wifiindoorpositioning.utils.AppContan
 import com.talentica.wifiindoorpositioning.wifiindoorpositioning.utils.Utils;
 
 import org.jetbrains.annotations.Nullable;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import io.realm.Realm;
 
@@ -48,6 +53,7 @@ public class LocateMeActivity extends AppCompatActivity {
     private RecyclerView rvPoints;
     private LinearLayoutManager layoutManager;
     private NearbyReadingsAdapter readingsAdapter = new NearbyReadingsAdapter();
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -97,6 +103,8 @@ public class LocateMeActivity extends AppCompatActivity {
     }
 
     public class MainActivityReceiver extends BroadcastReceiver {
+        private FirebaseDatabase database = FirebaseDatabase.getInstance();
+        private DatabaseReference mDatabase= database.getReference();
         @Override
         public void onReceive(Context context, Intent intent) {
             Log.v("LocateMeActivity", "MainActivityReceiver");
@@ -108,8 +116,11 @@ public class LocateMeActivity extends AppCompatActivity {
                 if (loc == null) {
                     tvLocation.setText("Location: NA\nNote:Please switch on your wifi and location services with permission provided to App");
                 } else {
+
+
                     String locationValue = Utils.reduceDecimalPlaces(loc.getLocation());
                     tvLocation.setText("Location: " + locationValue);
+                    mDatabase.child("project").child("location").setValue(locationValue);
                     String theDistancefromOrigin = Utils.getTheDistancefromOrigin(loc.getLocation());
                     tvDistance.setText("The distance from stage area is: " + theDistancefromOrigin + "m");
                     LocDistance theNearestPoint = Utils.getTheNearestPoint(loc);

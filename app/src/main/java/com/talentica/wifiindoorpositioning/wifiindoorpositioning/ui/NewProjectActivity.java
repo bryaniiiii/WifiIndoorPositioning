@@ -10,6 +10,8 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.talentica.wifiindoorpositioning.wifiindoorpositioning.R;
 import com.talentica.wifiindoorpositioning.wifiindoorpositioning.model.IndoorProject;
 
@@ -26,6 +28,11 @@ public class NewProjectActivity extends AppCompatActivity implements View.OnClic
 
     private EditText etProjectName, etProjectDesc;
     private Button btCreate;
+    private FirebaseDatabase database = FirebaseDatabase.getInstance();
+    private DatabaseReference mDatabase= database.getReference();
+
+// ...
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -56,11 +63,13 @@ public class NewProjectActivity extends AppCompatActivity implements View.OnClic
                         indoorProject.setName(text);
                         indoorProject.setDesc(desc);
                         indoorProject.setCreatedAt(new Date());
+
                     }
                 }, new Realm.Transaction.OnSuccess() {
                     @Override
                     public void onSuccess() {
                         // Transaction was a success.
+
                         NewProjectActivity.this.finish();
                     }
                 }, new Realm.Transaction.OnError() {
@@ -70,6 +79,8 @@ public class NewProjectActivity extends AppCompatActivity implements View.OnClic
                         System.out.print(error.getMessage());
                     }
                 });
+                mDatabase.child("project").child("name").setValue(text);
+                mDatabase.child("project").child("description").setValue(desc);
             }
         }
     }
